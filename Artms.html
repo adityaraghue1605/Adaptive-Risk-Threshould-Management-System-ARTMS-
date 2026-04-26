@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive Risk Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <h1>Adaptive Risk Threshold System</h1>
+
+        <div class="card">
+            <form id="riskForm">
+
+                <div class="grid">
+
+                    <select id="accountType">
+                        <option value="">Account Type</option>
+                        <option>Savings</option>
+                        <option>Current</option>
+                    </select>
+
+                    <input id="balance" type="number" placeholder="Balance">
+
+                    <input id="txnAmount" type="number" placeholder="Transaction Amount">
+
+                    <select id="location">
+                        <option value="">Location</option>
+                        <option>Local</option>
+                        <option>International</option>
+                    </select>
+
+                    <input id="loginAttempts" type="number" placeholder="Login Attempts">
+
+                    <select id="kyc">
+                        <option value="">KYC Status</option>
+                        <option>Complete</option>
+                        <option>Incomplete</option>
+                    </select>
+
+                    <select id="fraudHistory">
+                        <option value="">Fraud History</option>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+
+                    <input id="age" type="number" placeholder="Customer Age">
+
+                    <select id="txnType">
+                        <option value="">Transaction Type</option>
+                        <option>Online</option>
+                        <option>Offline</option>
+                    </select>
+
+                    <select id="device">
+                        <option value="">Device Type</option>
+                        <option>Known</option>
+                        <option>Unknown</option>
+                    </select>
+
+                    <input id="accAge" type="number" placeholder="Account Age (months)">
+
+                    <select id="intl">
+                        <option value="">International Transaction</option>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+
+                </div>
+
+                <button type="submit">Analyze Risk</button>
+            </form>
+
+            <div class="output">
+                <div class="gauge">
+                    <div class="needle" id="needle"></div>
+                    <div class="circle"></div>
+                </div>
+
+                <div id="result"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
